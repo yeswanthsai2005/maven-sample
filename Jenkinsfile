@@ -7,8 +7,9 @@ pipeline {
    stages {
 	stage('Checkout') {
         steps {
-		https://github.com/yeswanthsai2005/maven-sample.git
+		git 'https://github.com/yeswanthsai2005/maven-sample.git'
             }
+	}
       stage('Build my job') {
         steps {
             sh 'mvn clean compile'
