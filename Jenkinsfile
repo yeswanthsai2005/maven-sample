@@ -7,7 +7,7 @@ pipeline {
    stages {
 	stage('Checkout') {
         steps {
-		git 'https://github.com/devopscbabu/maven-sample.git'
+		https://github.com/yeswanthsai2005/maven-sample.git
                }
             }
       stage('Build my job') {
@@ -22,7 +22,7 @@ pipeline {
             }
       stage('Sonar Checks') {
 	 steps{
-	    withSonarQubeEnv(installationName: 'Sonarscanner', credentialsId: 'SonarCloud') {
+	    withSonarQubeEnv(credentialsId: 'Jenkins-sonar-token', installationName: 'Sonarcloud') {
     	    sh 'mvn clean package sonar:sonar'
      		}
   	 }
