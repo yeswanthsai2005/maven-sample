@@ -8,7 +8,6 @@ pipeline {
 	stage('Checkout') {
         steps {
 		https://github.com/yeswanthsai2005/maven-sample.git
-               }
             }
       stage('Build my job') {
         steps {
